@@ -7,6 +7,27 @@
         <link rel="stylesheet" href="main.css"/>
         <!--Feel free to add more CSS files as needed-->
         <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <style type="text/css">
+            /* Custom style rules go here. We've included a few, but feel free to write your own! */
+            button:focus {
+                outline: 0 !important;
+            }
+            svg {
+                display: block;
+                margin: 0 auto;
+                font: 10px sans-serif;
+            }
+            .toolTip {
+                position: absolute;
+                display: none;
+                min-width: 80px;
+                height: auto;
+                background: none repeat scroll 0 0 #ffffff;
+                border: 1px solid #6F257F;
+                padding: 14px;
+                text-align: center;
+            }
+        </style>
     </head>
 <body>
     <div class="header">
@@ -15,11 +36,112 @@
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
     <div class="row">
         <div class="col-lg-6">
+            <button type="button" class="btn btn-info" onclick="setData(0, 'year')">Long Term Data</button>
+            <button type="button" class="btn btn-info" onclick="setData(1, 'year')">Previous Five Years</button>
             <div id="graph1"></div>
             <div id="graph2"></div><br/>
         </div>
         <div class="col-lg-6">
             <div id="graph3"></div>
+        </div>
+        <br>
+        <br/>
+        <br/>
+        <div>
+        <pre> .
+
+
+
+
+
+
+
+        </pre>
+            <h4> 
+                Written Questions
+            </h4>
+            <h4> 
+                Question 1
+            </h4>
+            <pre>
+                My first graph answers the question of how many football games were played in a specific set of years. It shows a set of five years, giving the user the option, 
+                via a set of buttons, of which set of years they would like to see, based on the button they select. The user can either choose to see the previous five years 
+                (2015 - 2019) or choose to see how the number of games has changed over time by showing the user the number at the start of each decade (1970, 1980, 1990, 2000, 
+                and 2010). This graph shows a minimum of five years in both scenarios, therefore showing the information that the user would like to see. Ideally, if I had known 
+                how to successfully construct a line plot, I would have created a line plot to show this information. A line plot would have clearly communicated any changes that 
+                occured over the selected set of years. The line plot would have been ideal, also, because it focuses less on the ranking or hierarchy of years based on games, and 
+                more about simply presenting the year by year totals. However, even if it is not the ideal format, the bar plot still conveys the intended information. The y axis 
+                contains the specific year, with the bar extending based on how many games were played that year and the count displayed right after. My second graph was tasked 
+                with showing the top teams based on winning percentage. I calculated winning percentage based on the total number of wins divided by the total number of games played
+                by that team (wins, loses, and ties included). This information fit nicely in a barplot with the team on the y axis and the winning percentage displayed over 
+                the x axis. The barplot format allowed us to visually understand the top winning percentages, sorted and ranked, and to see their magnitude compared with the other 
+                top nations. Along with this, to give the user a better understanding behind the percentage, they are allowed to see the total number of wins and games used to 
+                calculate winning percentage using a tooltip. This graph answers the question, as the user can see the top 10 nations with the correct labels. The final task was to 
+                understand the top performing teams over the last two world cups. In order to accomplish this, I gathered information on the total number of goals scored by each 
+                country, in only official World Cup games over the past two World Cups. I chose this metric over a different metric, such as winning percentage for example, because 
+                it would tell us how much a team was in control of a game. For example, if a team wins 6-0 vs. 1-0 in a World Cup game, the winning percentage statistic would count 
+                these games evenly as both wins, but we have differentiated between them. Secondly, this stat is a good indicator because it can also tell us how far a team went 
+                most likely (the more games you play / advance the more goals you score). This graph displays the information by taking the top 20 scoring nations over the past 
+                two World Cups and ranking them on the y axis, as well as displaying their magnitude via bars so we can see the top performing nations.
+                </pre>
+                    <h4> 
+                Question 2
+            </h4>
+            <pre>
+            Three ways in which D3 helped my visualization was through button toggling, tooltips, and customization. Through button toggling, I was able to give more 
+            power to the user and let them see the data they were most interested in or had the most use for. For example, on my first graph, I used button toggling 
+            to allow the user to choose between data from the previous five years or a series of years over the past few decades. This would allow the user to toggle
+            between seeing the change over the previous few years and the change over the longer term. D3 made this relatively easy to accomplish. The second tool 
+            I found very useful, the tooltip, allowed me to provide the user with even more information and give them insight behind their data. For example, when 
+            I was showing winning percentages, the user had no idea the context behind that percentage. Just upon a glance, 75% seems very good, but after learning 
+            the team played a total of four games it is much less impressive. I showed users the number of wins and total games of each top percentage team when they 
+            hovered over the bar using tooltip. This was made much easier with D3. Finally, the visualization component and customization was made much easier using D3. 
+            For example, when picking a color scheme, an entire pallet of similar colors was provided upon selected of a single color, making it much easier to choose 
+            a style that would present best to the user.
+            </pre>
+            <h4> 
+                Question 3
+            </h4>
+            <pre>
+            Three ways in which D3 was not the best tool was the ammount of knowledge of multiple programming languages that was necessary, the debugging process, 
+            and the formatting process. First, programming in D3 required an entirely knew language in JavaScript. This language was slightly different than a language 
+            like python and was much more relient on knowing exact syntax rather than logical thinking. Learning JavaScript took some time, but on top of that D3 
+            required knowledge of HTML and a small amount of css. Overall, it was difficult to balance learning the syntax of three languages for a single graph 
+            representation. Second, the debugging process was very difficult when using D3. A lot of times, when something is going wrong, no graph is showing 
+            up at all, which can make it difficult to pinpoint where the error is coming from. Log Console statements are useful, but a lot of debugging can 
+            sometimes require more than just print statements. Sometimes, when inspecting elements in Chrome, specific line numbers of our JS file would not be 
+            provided, which also made debugging difficult. I found the formatting process, specifically how the set up of our graphs related to the set up of our 
+            HTML file, to be difficult. This lead to some difficulty clearly displaying the graphs and avoiding a crowded look, which could cause issues 
+            for some users.
+            </pre>
+            <h4> 
+                Question 4
+            </h4>
+            <pre>
+            One major takeaway I had from the "Comprehensive Guide to Accessible Data Visualization" reading was the idea of technological accessability. 
+            As someone who grew up with computers, it can be easy to forget about the wide range of technological skills that users possess. Therefore, it 
+            is important to make your design as simple as possible, to allow users to get the most out of your visualization. Therefore, users who are technologically 
+            less advanced may have issue with my second graph, specifically with the tooltip. Users may want to know the additional information I provided through the 
+            tooltip (# of wins and total games), but may not know, intuatively, to access that information by hovering over the bargraph. I should have considered 
+            this during my design process, and possibly included this information through a mechanism less advanced than the tooltip. On the other hand, one group 
+            that I do think would find my dashboard to be accessible would be those with color blindness. In the "Comprehensive Guide to Accessible Data 
+            Visualization" article, the author specifically mentions the difficulty that many users have with seeing specific colors, mostly reds, blues, 
+            yellows, and greens. In my dashboard, I have avoided all of these colors entirely. Also, specific users that are unable to see color at all would 
+            most likely not have difficulty with my dashboard, as none of my graphs inherently rely on color to relay information, but rather use color to 
+            enhance the graph. 
+            </pre>
+            <h4> 
+                Question 5
+            </h4>
+            <pre>
+            Looking back at the design process of my dashboard, I think one area of accessibility that could be improved upon is the variety of ways in which
+            I portray my information. Everyone processes information in different ways, therefore it is not as accessible to portray information in a single way 
+            throughout the multiple graphs on the dashboard. I could have taken more time to consider the different ways users process information and tailored 
+            my graphs as a result. One factor that kept me from this was the difficulty I had with D3, specifically with debugging D3 programs. I learned how
+            to portray information successfully in one way and was able to debug that portrayal, but had difficulty with other graphs. Therefore, I mostly 
+            used the tools I felt most comfortable with, even if I understood that a different portrayal of information may be more accessible or better suited. 
+            The best example of this is in my first graph, which would be much better suited as a line plot, but in the end was potrayed as a bar graph.
+            </pre>
         </div>
     </div>
     <!--Feel free to add more JavaScript files as needed-->
